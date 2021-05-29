@@ -13,4 +13,20 @@ CREATE TABLE Classe(
 CREATE TABLE Matiere(
     Id_Matiere INT  auto_increment PRIMARY KEY,
     Nom_Matiere VARCHAR(20) 
+);CREATE TABLE Participant(
+    id_Participant INT auto_increment PRIMARY KEY,
+    Nb_Connexion_Deconnexion INT,
+    Duree_Moyenne_Presence INT,
+    Type_terminal VARCHAR(20),
+    Adresse_mail VARCHAR(20),
+    Localisation VARCHAR(20) 
+);
+
+CREATE TABLE Professeur(
+    Id_Prof INT auto_increment PRIMARY KEY,
+    NomProf VARCHAR(10) NOT NULL,
+    PrenomProf VARCHAR(20) NOT NULL,
+    Login VARCHAR(20),
+    Password VARCHAR(20),
+    FOREIGN KEY (Id_Prof) REFERENCES Participant(Id_Participant)
 );
