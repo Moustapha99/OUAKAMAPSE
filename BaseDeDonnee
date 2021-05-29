@@ -1,0 +1,16 @@
+DROP IF EXISTS ;
+
+CREATE DATABASE Projet_schema;
+USE Projet_schema;
+
+CREATE TABLE Classe(
+    Id_Classe INT auto_increment PRIMARY KEY,
+    Nom_Classe VARCHAR(20) NOT NULL,
+    Effectif INTEGER NOT NULL
+);
+
+
+CREATE TABLE Matiere(
+    Id_Matiere INT  auto_increment PRIMARY KEY,
+    Nom_Matiere VARCHAR(20) 
+);
